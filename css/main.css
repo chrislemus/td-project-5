@@ -1,0 +1,38 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+    /*background-color: bisque;*/
+}
+
+.chocolat-parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.chocolat-parent img {
+    padding: 15px;
+}
+
+.search-bar {
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(219, 219, 219);
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+@media (min-width: 768px) {
+    .search-bar {
+        width: 400px;
+    }
+  }
+  
