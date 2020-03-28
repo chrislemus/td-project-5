@@ -1,16 +1,18 @@
-$('.chocolat-parent').Chocolat();
+$('.chocolat-parent').Chocolat({
+    enableZoom: false,
+});
 
-$('.chocolat-parent a[title*="lake"] ').css('border', '5px solid red');
-
-// $('.search-bar').on('keyup', function () {
-//     console.log($('.chocolat-parent a').attr('title'))
-// });
-
+//event starts when user types in search input
 $('.search-bar').on('keyup', function () {
+    //variable'value' stores user input in real-time, while converting
+    //to lowercase to avoid capitalization issues 
     let value = $(this).val().toLowerCase();
-    let imgTitle = $('.chocolat-parent a').attr('title');
-    $(imgTitle).filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    //filter targets anchor elements and runs the function
+    $('.chocolat-parent a').filter(function() {
+        //attr targets title attribute in previuos selected element
+        //toggle displays elements that match condition.
+        $(this).toggle($(this).attr('title').toLowerCase().indexOf(value) > -1);
     });
 });
+
 
